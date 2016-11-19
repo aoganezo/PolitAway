@@ -1,11 +1,16 @@
 /**
  * Created by arthu on 11/19/2016.
  */
+
+    console.log( "ready!" );
+
+
 console.log("Facebook Loaded");
-alert("HELLLO");
-console.log(document.querySelector('body'));
-//var element = document.querySelector('body');
-var ele = document.getElementsByClassName("_1dwg");
-//element.parentElement.removeChild(element);
-console.log(ele);
-ele[0].parentNode.removeChild(ele[0]);
+alert("HELLO");
+if (document.getElementsByClassName("_5jmm")) {
+    var elem = document.getElementsByClassName("_5jmm");
+    console.log(elem);
+    if (document.getElementById("hyperfeed_story_id_*").textContent.contains("Bill")) {
+        alert("FOUND THIS");
+    }
+}
