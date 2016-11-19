@@ -79,7 +79,7 @@ function getImageUrl(searchTerm, callback, errorCallback) {
     var height = parseInt(firstResult.tbHeight);
     console.assert(
         typeof imageUrl == 'string' && !isNaN(width) && !isNaN(height),
-        'Unexpected respose from the Google Image Search API!');
+        'Unexpected response from the Google Image Search API!');
     callback(imageUrl, width, height);
   };
   x.onerror = function() {
