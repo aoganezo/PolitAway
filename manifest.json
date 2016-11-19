@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Make Facebook Great Again",
+  "description": "Block all the unnecessary political mumbo-jumbo.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Politics away!"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
