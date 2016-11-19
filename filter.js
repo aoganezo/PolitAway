@@ -3,6 +3,6 @@
  */
 console.log("Facebook Loaded");
 alert("HELLLO");
-//console.log(document.querySelector('div.hyperfeed_story_id_583012bc49d0a7d61270618'));
-var element = document.querySelector('div.hyperfeed_story_id_583012bc49d0a7d61270618');
+console.log(document.querySelector('body'));
+var element = document.querySelector('body');
 element.parentElement.removeChild(element);
