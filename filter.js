@@ -4,5 +4,8 @@
 console.log("Facebook Loaded");
 alert("HELLLO");
 console.log(document.querySelector('body'));
-var element = document.querySelector('body');
-element.parentElement.removeChild(element);
+//var element = document.querySelector('body');
+var ele = document.getElementsByClassName("_1dwg");
+//element.parentElement.removeChild(element);
+console.log(ele);
+ele[0].parentNode.removeChild(ele[0]);
