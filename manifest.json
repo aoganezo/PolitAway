@@ -18,7 +18,8 @@
       ],
       "js": [
         "filter.js"
-      ]
+      ],
+      "run_at": "document_end"
     }
   ],
   "permissions": [
