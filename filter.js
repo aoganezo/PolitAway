@@ -6,9 +6,13 @@ function removeItems() {
     var low = ["TRUMP", "CLINTON", "KILLARY", "NOT MY PRESIDENT"];
     var med = ["PENCE"];
     var high = ["SENATOR", "WASHINGTON D.C.", "POLITICS", "PENCE"];
-    var currentSetting = low;
+    // function ext("options.js", () {
+    //     (currentSetting = "level()");
+    //     var currentSetting = low;
+    // }
+// );
     var found = 0;
-    
+
     localStorage.getItem("agressivness");
     console.log(agressivness);
     
