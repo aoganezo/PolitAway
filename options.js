@@ -1,4 +1,5 @@
 window.onload = function(){
+console.log(localStorage.getItem("agressivness"));
 var level;
 
 function loadOptions() {
@@ -23,11 +24,11 @@ if (agressivness === null){
 //    console.log(localStorage.getItem("agressivness"));
 //}
     
-    function saveOptions(){
+    document.getElementById("points").addEventListener('click', function(){
     agressivness = document.getElementById("points").value;
     localStorage.setItem("agressivness", agressivness);
     console.log(localStorage.getItem("agressivness"));
-}
+});
 
 function eraseOptions() {
     agressivness = 100;

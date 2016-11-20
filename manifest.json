@@ -24,8 +24,10 @@
         "http://www.facebook.com/*" 
       ],
       "js": [
-        "filter.js"
+        "filter.js",
+        "jquery-1.11.3.min.js"
       ],
+        "css": ["jquery.mobile.inline-svg-1.4.5.min.css"],
       "run_at": "document_end"
     }
   ],
