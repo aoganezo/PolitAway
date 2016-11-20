@@ -2,6 +2,7 @@
  * Created by artur on 11/19/2016.
  */
 function removeItems() {
+    alert(window.level);
     //Low is the least aggressive setting, that is it removes the WORST posts.
     var low = [/*low*/"TRUMP", "CLINTON", "KILLARY", "NOT MY PRESIDENT"];
 
@@ -22,7 +23,8 @@ function removeItems() {
     var found = 0; //Counts how many posts it has removed. Not 100% accurate.
     var currentSetting = low; //Selects the current setting to use.
     localStorage.getItem("aggressiveness");
-    console.log(currentSetting);
+    //console.log(currentSetting);
+
     
     if (document.getElementsByClassName("_5jmm")) { //Checks if it's a post on a feed. "_5jmm" seems to be on all posts.
         var feed = document.getElementsByClassName("_5jmm"); // Assigns the feed array to a var.
