@@ -2,16 +2,20 @@
 <head>
 	<title>Make Facebook Great Again - Options</title>
 	<script type="text/javascript" src="options.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body onload="loadOptions()">
-	<h1>Make Facebook Great Again</h1>
-    <h3>Options</h3>
-	<select id="color">
-		<option value="blue">Blue</option>
-		<option value="red">Red</option>
-		<option value="green">Green</option>
-		<option value="yellow">Yellow</option>
-	</select>
+	<h1 align="center">Make Facebook Great Again</h1>
+    <h3 align="center">Options</h3>
+      <div data-role="main" class="ui-content">
+    <form method="post" action="demoform.asp">
+      <label for="points" align="center">Filter Aggressiveness (Low to High)</label>
+      <input type="range" id="points" name="points" id="points" value="100" min="0" max="100">
+    </form>
+  </div>
 	<br />
 	<button onclick="saveOptions()">Save</button>
 	<br />
