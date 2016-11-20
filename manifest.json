@@ -2,6 +2,7 @@
   "manifest_version": 2,
 
   "name": "Make Facebook Great Again",
+  "short_name": "FB Political Filter",
   "description": "Block all the unnecessary political mumbo-jumbo.",
   "version": "1.0",
   "options_page": "options.html",
