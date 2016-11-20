@@ -8,6 +8,7 @@ function removeItems() {
         level = items.level;
     });
     //Low is the least aggressive setting, that is it removes the WORST posts.
+    var none = [];
     var low = [/*low*/"TRUMP", "CLINTON", "KILLARY", "NOT MY PRESIDENT"];
 
     //Med is medium aggressiveness, it includes all low settings, and a few more.
@@ -20,6 +21,9 @@ function removeItems() {
         /*low*/"TRUMP", "CLINTON", "KILLARY", "NOT MY PRESIDENT"];
 
     switch (currentSetting){
+        case "none":
+            currentSetting = none;
+            break;
         case "low":
             currentSetting = low;
         case "med":
@@ -39,16 +43,17 @@ function removeItems() {
     //localStorage.getItem("aggressiveness");
     //console.log(currentSetting);
 
-    
-    if (document.getElementsByClassName("_5jmm")) { //Checks if it's a post on a feed. "_5jmm" seems to be on all posts.
-        var feed = document.getElementsByClassName("_5jmm"); // Assigns the feed array to a var.
-        for (var i = 0; i < feed.length; i++) { //Loops through all posts.
-            var postText = feed[i].textContent.toUpperCase(); //Assigns this posts text to a var.
-            for (var j = 0; j < currentSetting.length; j++) { //Loops through keywords.
-                if (postText.indexOf(currentSetting[j]) !== -1) { //Checks if a word from keywords is in the post.
-                    if (postText.indexOf(currentSetting[j]) < postText.indexOf("COMMENTS")) { //Makes sure word isn't in comments.
-                        feed[i].parentElement.removeChild(feed[i]); //Removes the post.
-                        console.log("found: " + found++);
+    if (currentSetting != "none") {
+        if (document.getElementsByClassName("_5jmm")) { //Checks if it's a post on a feed. "_5jmm" seems to be on all posts.
+            var feed = document.getElementsByClassName("_5jmm"); // Assigns the feed array to a var.
+            for (var i = 0; i < feed.length; i++) { //Loops through all posts.
+                var postText = feed[i].textContent.toUpperCase(); //Assigns this posts text to a var.
+                for (var j = 0; j < currentSetting.length; j++) { //Loops through keywords.
+                    if (postText.indexOf(currentSetting[j]) !== -1) { //Checks if a word from keywords is in the post.
+                        if (postText.indexOf(currentSetting[j]) < postText.indexOf("COMMENTS")) { //Makes sure word isn't in comments.
+                            feed[i].parentElement.removeChild(feed[i]); //Removes the post.
+                            console.log("found: " + found++);
+                        }
                     }
                 }
             }

@@ -2,16 +2,19 @@ levelglobal = "";
 
 function saveLevel(agressivness){
         level = ""
+        if (agressivness == 0){
+            level = "none";
+        }
         if (agressivness <= 33){
-            level = "low"
+            level = "low";
         }
 
         else if (agressivness < 66){
-            level = "med"
+            level = "med";
         }
 
         else if (agressivness >= 66){
-            level="high"
+            level="high";
         }
          chrome.storage.sync.set({"agressivness": agressivness, "level" : level},()=>{});
     }
