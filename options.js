@@ -1,3 +1,4 @@
+window.onload = function(){
 var level;
 
 function loadOptions() {
@@ -16,7 +17,13 @@ if (agressivness === null){
     var agressivness = parseInt(agressivness);
 }
 
-function saveOptions(){
+//function saveOptions(){
+//    agressivness = document.getElementById("points").value;
+//    localStorage.setItem("agressivness", agressivness);
+//    console.log(localStorage.getItem("agressivness"));
+//}
+    
+    function saveOptions(){
     agressivness = document.getElementById("points").value;
     localStorage.setItem("agressivness", agressivness);
     console.log(localStorage.getItem("agressivness"));
@@ -38,7 +45,8 @@ function level(){
         level = "med"
     }
     
-    else (agressivness >= 66){
+    else if (agressivness >= 66){
         level="high"
     }
 }
+};
