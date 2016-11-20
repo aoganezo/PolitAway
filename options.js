@@ -1,26 +1,30 @@
+var defaultColor = "blue";
+
 function loadOptions() {
-    var agressivness = localStorage.getItem("agressivness")
-    $("a[role='slider']").css({left: agressivness})
-    
-    agressivness = parseInt(agressivness);
- document.getElementById("points").value = agressivness;
-}
-if (agressivness == null){
-    var agressivness = 100;
-    localStorage.setItem("agressivness", agressivness);
-    var agressivness = parseInt(agressivness);
+	var favColor = localStorage["favColor"];
+
+	// valid colors are red, blue, green and yellow
+	if (favColor == undefined || (favColor != "red" && favColor != "blue" && favColor != "green" && favColor != "yellow")) {
+		favColor = defaultColor;
+	}
+
+	var select = document.getElementById("color");
+	for (var i = 0; i < select.children.length; i++) {
+		var child = select.children[i];
+			if (child.value == favColor) {
+			child.selected = "true";
+			break;
+		}
+	}
 }
 
-function saveOptions(){
-    agressivness = document.getElementById("points").value;
-    alert(agressivness);
-    localStorage.setItem("agressivness", agressivness);
+function saveOptions() {
+	var select = document.getElementById("color");
+	var color = select.children[select.selectedIndex].value;
+	localStorage["favColor"] = color;
 }
 
 function eraseOptions() {
-    agressivness = 100;
-    document.getElementById("points").value = agressivness;
-    localStorage.setItem("agressivness", agressivness);
+	localStorage.removeItem("favColor");
+	location.reload();
 }
-
-
