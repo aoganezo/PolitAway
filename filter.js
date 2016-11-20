@@ -8,7 +8,10 @@ function removeItems() {
     var high = ["SENATOR", "WASHINGTON D.C.", "POLITICS", "PENCE"];
     var currentSetting = low;
     var found = 0;
-
+    
+    localStorage.getItem("agressivness");
+    console.log(agressivness);
+    
     if (document.getElementsByClassName("_5jmm")) {
         var elem = document.getElementsByClassName("_5jmm"); // + has one of the words desire to filter out
         for (var i = 0; i < elem.length; i++) {
