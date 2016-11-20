@@ -8,7 +8,7 @@
  * @param {function(string)} callback - called when the URL of the current tab
  *   is found.
  */
-function getCurrentTabUrl(callback) {
+/*function getCurrentTabUrl(callback) {
   // Query filter to be passed to chrome.tabs.query - see
   // https://developer.chrome.com/extensions/tabs#method-query
   var queryInfo = {
@@ -54,7 +54,7 @@ function getCurrentTabUrl(callback) {
  * @param {function(string)} errorCallback - Called when the image is not found.
  *   The callback gets a string that describes the failure reason.
  */
-function getImageUrl(searchTerm, callback, errorCallback) {
+/*function getImageUrl(searchTerm, callback, errorCallback) {
   // Google image search - 100 searches per day.
   // https://developers.google.com/image-search/
   var searchUrl = 'https://ajax.googleapis.com/ajax/services/search/images' +
@@ -115,4 +115,4 @@ document.addEventListener('DOMContentLoaded', function() {
       renderStatus('Cannot display image. ' + errorMessage);
     });
   });
-});
+});*/
