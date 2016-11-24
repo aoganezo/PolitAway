@@ -1,7 +1,7 @@
 levelglobal = "";
 
 function saveLevel(agressivness){
-        level = ""
+        level = "";
         if (agressivness == 0){
             level = "none";
         }

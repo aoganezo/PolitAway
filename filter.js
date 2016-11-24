@@ -26,6 +26,7 @@ function removeItems() {
             break;
         case "low":
             currentSetting = low;
+            break;
         case "med":
             currentSetting = med;
             break;
@@ -33,15 +34,10 @@ function removeItems() {
             currentSetting = high;
             break;
     }
-    // function ext("options.js", () {
-    //     (currentSetting = "level()");
-    //     var currentSetting = low;
-    // }
-// );
     var found = 0; //Counts how many posts it has removed. Not 100% accurate.
 
     //localStorage.getItem("aggressiveness");
-    //console.log(currentSetting);
+    console.log(currentSetting);
 
     if (currentSetting != "none") {
         if (document.getElementsByClassName("_5jmm")) { //Checks if it's a post on a feed. "_5jmm" seems to be on all posts.
@@ -51,8 +47,10 @@ function removeItems() {
                 for (var j = 0; j < currentSetting.length; j++) { //Loops through keywords.
                     if (postText.indexOf(currentSetting[j]) !== -1) { //Checks if a word from keywords is in the post.
                         if (postText.indexOf(currentSetting[j]) < postText.indexOf("COMMENTS")) { //Makes sure word isn't in comments.
+                            console.log(postText);
                             feed[i].parentElement.removeChild(feed[i]); //Removes the post.
                             console.log("found: " + found++);
+
                         }
                     }
                 }
